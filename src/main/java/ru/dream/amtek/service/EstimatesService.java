@@ -29,12 +29,13 @@ public class EstimatesService {
         return estimatesRepository.findAll();
     }
 
-    public Estimates update(Estimates estimates) {
-        return estimatesRepository.save(estimates);
-    }
 
     public void delete(Long id) {
         estimatesRepository.deleteById(id);
+    }
+
+    public List<Estimates> readBySubjectsId(Long id) {
+        return estimatesRepository.findBySubjectsId(id);
     }
 
 }

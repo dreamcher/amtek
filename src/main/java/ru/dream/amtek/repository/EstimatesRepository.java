@@ -10,5 +10,5 @@ import java.util.List;
 @Repository
 public interface EstimatesRepository extends JpaRepository<Estimates, Long> {
 
-    List<Subjects> findBySubjectsId(Long id);
+    List<Estimates> findBySubjectsId(Long id);
 }
