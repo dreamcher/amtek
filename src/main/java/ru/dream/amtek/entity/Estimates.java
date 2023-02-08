@@ -5,8 +5,10 @@ import lombok.AllArgsConstructor;
 import lombok.Builder;
 import lombok.Data;
 import lombok.NoArgsConstructor;
+import ru.dream.amtek.dto.EstimateDTO;
 
 import java.util.Date;
+import java.util.List;
 
 @Entity
 @Data
@@ -18,7 +20,7 @@ public class Estimates {
     @GeneratedValue(strategy = GenerationType.AUTO)
     private Long id;
     private Date data;
-    private Integer grade;
+    private String grade;
     private Integer total_trim;
     @ManyToOne
     @JoinColumn(name = "subjects_id")

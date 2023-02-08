@@ -10,7 +10,7 @@ public class EstimateDTO {
 
     private Long id;
     private Date data;
-    private Integer grade;
+    private String grade;
     private Integer total_trim;
     private Subjects subjects;
 
