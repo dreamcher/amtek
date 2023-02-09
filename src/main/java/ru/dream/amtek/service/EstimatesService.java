@@ -14,14 +14,15 @@ import java.util.List;
 public class EstimatesService {
 
     private final EstimatesRepository estimatesRepository;
-    private final SubjectsRepository subjectsRepository;
+    private final SubjectsService subjectsService;
 
 
     public Estimates create(EstimateDTO dto) {
         return estimatesRepository.save(Estimates.builder()
-                .data(dto.getData())
-                .total_trim(dto.getTotal_trim())
+                .date(dto.getDate())
                 .grade(dto.getGrade())
+                .totaltrim(dto.getTotaltrim())
+                .subjects(subjectsService.readById(dto.getSubjectsId()))
                 .build());
     }
 
